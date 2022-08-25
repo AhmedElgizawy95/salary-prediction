@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Luxurious+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Luxurious+Script&family=Monsieur+La+Doulaise&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+ 
+}
+
+
+
+header{
+    background-color:rgb(27, 26, 26);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 0px 80px ;
+    flex-wrap: wrap;
+    
+
+}
+a.signature{
+    font-family: 'Monsieur La Doulaise', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color:  #eee675;
+    font-size: 2em;
+    font-weight:100;
+    text-decoration: none;
+}
+.logo{
+    margin-left: 130px;
+    text-decoration: none;
+    color:deepskyblue;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+
+body{
+    font-size: 20px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color:deepskyblue;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding-left: 10px;
+    margin-right: 50px;
+}
+
+.navigation a:hover{
+    
+    color:darkturquoise ;
+}
+
+
+section {
+    width: 100%;
+padding: 10vh 10vw;
+
+}
+
+/* ************************************************** */
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    /* display: flex; */
+    /* align-items: center; */
+    background: url(static/pexels-daniel-absi-952670.jpg) no-repeat;
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main img{
+    display: block;
+    width: 50vw;
+    max-width: 340px;
+}
+
+.main h2{
+    display: block;
+}
+
+
+.main h2 span{
+    
+    color:deepskyblue;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+
+.main h2 span {
+    
+    color:deepskyblue;
+	color: transparent;
+	animation: blur 10s ease-out infinite;
+	-webkit-animation: blur 10s ease-out infinite;
+}
+
+.main h3 span {
+    
+  
+	color: transparent;
+	animation: blur 10s ease-out infinite;
+	-webkit-animation: blur 10s ease-out infinite;
+}
+.main h2 span:nth-child(1) {
+    
+    color:deepskyblue;
+	animation-delay: 0.1s;
+	-webkit-animation-delay: 0.1s;
+}
+.main h2 span:nth-child(2) {
+    
+    color:deepskyblue;
+	animation-delay: 0.2s;
+	-webkit-animation-delay: 0.2s;
+}
+.main h2 span:nth-child(3) {
+    
+    color:deepskyblue;
+	animation-delay: 0.3s;
+	-webkit-animation-delay: 0.3s;
+}
+
+.main h2 span:nth-child(4) {
+    
+    color:deepskyblue;
+	animation-delay: 0.4s;
+	-webkit-animation-delay: 0.4s;
+}
+.main h3 span:nth-child(1) {
+    
+    
+	animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5s;
+}
+.main h3 span:nth-child(2) {
+    
+	animation-delay: 0.6s;
+	-webkit-animation-delay: 0.6s;
+}
+
+@keyframes blur {
+	0%		{text-shadow:  0 0 100px rgb(255, 255, 255); opacity:0;}
+	5%		{text-shadow:  0 0 90px #fff;}
+	15%		{opacity: 1;}
+	20%		{text-shadow:  0 0 0px #fff;}
+	80%		{text-shadow:  0 0 0px #fff;}
+	85%		{opacity: 1;}
+	95%		{text-shadow:  0 0 90px #fff;}
+	100%	{text-shadow:  0 0 100px #fff; opacity:0;}
+}
+
+@-webkit-keyframes blur {
+	0%		{text-shadow:  0 0 100px #fff; opacity:0;}
+	5%		{text-shadow:  0 0 90px #fff;}
+	15%		{opacity: 1;}
+	20%		{text-shadow:  0 0 0px #fff;}
+	80%		{text-shadow:  0 0 0px #fff;}
+	85%		{opacity: 1;}
+	95%		{text-shadow:  0 0 90px #fff;}
+	100%	{text-shadow:  0 0 100px #fff; opacity:0;}
+}
+
+
+
+
+
+
+
+
+
+
+.main h3{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-btn{
+    color: #fff;
+    background-color:dodgerblue;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block ;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+
+
+}
+.main-btn:hover{
+    background-color:darkslateblue;
+    transform: scale(1.1, 1.1);
+}
+
+.social-icons a{
+color:rgb(238, 255, 0);
+font-size: 1.7em;
+padding-right: 30px;
+}
+
+.Aboutme  {
+    
+    background: midnightblue;
+    min-height: 40em;
+  
+
+}
+section.Aboutme{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+ .qualtitle span.name{
+    margin-left: 20px;
+    display:inline;
+    
+    color:rgb(255, 255, 255);
+    
+    font-weight: 800;
+}
+.Aboutme.h2.title{
+    padding-top: 10px;
+}
+.qualtitle{
+    margin-left: 100px;
+    font-size: 1.5em ;
+    color: rgb(253, 253, 253);
+    padding-bottom: 5px;
+    font-weight: 800;
+}
+.qualbody{
+    justify-content:space-between;
+    padding: 15px;
+}
+.contforinfo{
+    justify-content:center;
+}
+span.qualdesc{
+    
+    color: #fff;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+i.fas.fa-certificate{
+padding-top: 10px;
+color: yellow;
+padding-right: 10px;
+font-size: 20px;
+margin-left:60px;
+}
+i.fas.fa-circle{
+padding-top: 10px;
+color: yellow;
+padding-right: 10px;
+font-size: 10px;
+margin-left:60px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color:deepskyblue;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    
+    background-color:rgb(255, 255, 255);
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 50%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+    
+
+}
+
+
+.card:hover{
+    transform: scale(1.1, 1.1);
+
+}
+.icon {
+    color:dodgerblue;
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color:dodgerblue;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+.projects {
+    background-color: midnightblue;
+}
+
+.projects .content{
+    margin-top: 30px;
+}
+
+.project-card{
+    background-color: rgb(19, 26, 26);
+    border: 1px soild #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+
+
+}
+
+.project-card:hover{
+    transform: scale(1.1, 1.1);
+
+
+}
+
+.project-card:hover .project-image{
+
+    opacity:0.9;
+    
+
+}
+.project-image img{
+    width:100%;
+
+}
+.project-info{
+    padding: 1em;
+}
+.project-category{
+    font-size: 1.2em;
+    font-weight :800;
+    color:#fff;
+}
+
+.project-title{
+    color: deepskyblue;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight :800;
+    margin-top: 10px;
+
+}
+.more-details{
+    text-decoration: none;
+    color:deepskyblue ;
+
+}
+.more-details:hover{
+    color: darkslateblue;
+
+}
+.contact .icon{
+    color: rgb(17, 184, 17);
+    font-size: 4.5em;
+    
+
+
+}
+
+.contact .iconenv{
+    text-align: center;
+    color: deepskyblue;
+    font-size: 4.5em;
+
+
+}
+
+.contact .info h3{
+    color:#000
+
+}
+
+.contact .info p{
+    font-size: 1.2em;
+
+}
+span.footersign{
+    
+    font-family: 'Monsieur La Doulaise', cursive;
+    margin-left: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color:  #eee675;
+    font-size: 2em;
+    font-weight: 100;
+}
+.footer {
+    background-color:rgb(27, 26, 26);
+    color: #fff;
+    margin: 0;
+    padding: 2em;
+    display:flex;
+    justify-content: space-between;
+
+}
+.footer-title{
+    margin-top: 5px;;
+    font-size: 1.3em;
+    font-weight: 600;
+    
+}
+
+div.span
+{
+    margin-right: 100px;
+    font-family: 'Monsieur La Doulaise', cursive;
+    
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color:  #eee675;
+    font-size: 2em;
+    font-weight: 100;
+}
+@media(max-width:1200px)
+{
+
+    header{
+        padding: 12px 20px;
+
+    }
+
+    .navigation a{
+        padding-left: 10px;
+    
+    }
+
+    .title{
+        font-size: 1.8em;
+
+    }
+
+    .section{
+        padding: 80px 20px;
+
+    }
+
+    .main-content h2{
+        font-size:1em;
+    }
+    .main-content h3{
+        font-size:1.6em;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:1023px)
+{
+    .main img{
+        margin: 0 auto;
+    }
+
+    header{
+        padding: 12px 20px;
+
+    }
+
+    .navigation a{
+        padding-left: 10px;
+    
+    }
+
+    .title{
+        font-size: 1.8em;
+
+    }
+
+    .section{
+        padding: 80px 20px;
+
+    }
+
+    .main-content h2{
+        font-size:1em;
+    }
+    .main-content h3{
+        font-size:1.6em;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:641px)
+{
+
+    h2.signature{
+        font-size: 1.5em;
+    }
+    body{
+        font-size: 12px;
+    }
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size:1.4em;
+
+    }
+
+}
+
+@media(max-width:300px)
+{
+    body{
+        font-size: 10px;
+    }
+
+}
+

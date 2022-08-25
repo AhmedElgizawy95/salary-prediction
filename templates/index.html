@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title>Ahmed Alaa</title>
+</head>
+<style>
+     
+        
+            
+        
+        #myBtn {
+          display: none;
+          position:fixed;
+          left: 50%;
+          bottom: 30px;
+          right: 50%;
+          z-index: 99;
+          font-size: 20px;
+          border: none;
+          outline: none;
+          background-color: rgb(250, 250, 250);
+          color:dodgerblue;
+          cursor:pointer;
+          padding: 15px;
+          border-radius: 4px;
+        }
+        
+        #myBtn:hover {
+          background-color:midnightblue;
+        }
+        
+        </style>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" style = "width: max-content;"><i class="fas fa-arrow-up"></i></button>
+
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+    <header>
+        <!-- class="logo">Ahmed Alaa -->
+        <a href="#" h2 class="signature">Ahmed Alaa Ahmed</h2></a>
+        <nav class="navigation">
+            <a href="#aboutme">About Me</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+    
+<section class="main" style="background-image: url(static/pexels-daniel-absi-952670.jpg);">
+    
+    <div>
+        <div class="Mylogo"><img src="/static/MyLogoT.png"></div>    
+        <h2><span>Certified</span><span> Data </span> <span>Scientist</span></h2>
+        <h3><span>Extracting Insights Out Of Your Data</span></h3>
+        <a href="#projects" class="main-btn">View my work</a>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ahmedaelgizawy"><i class="fab fa-linkedin"></i></a>
+            <a href="https://ahmedelgizawy95.github.io/"><i class="fab fa-github-square"></i></a>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="Aboutme" id="aboutme" style ="justify-content: center;display: inline-block;text-align: center;">
+
+    <h2 class="title">Salary Prediction Service</h2>
+    <!-- <div class="qualtitle">Name : <span class="name">Ahmed Alaa Ahmed</span> </div> -->
+       
+ 
+    <div class="qualifications">
+       <!-- <div class="qualtitle">Work Experience :</div>
+           <div class="qualbody">
+              <i class="fas fa-circle"></i><span class="qualdesc">Software Developer at AIO</span>
+            </div>
+              <div class="qualtitle">Education :</div>
+              <div class="qualbody">
+                <i class="fas fa-circle"></i><span class="qualdesc">Graduate of AASTMT, Computer Engineering Department</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">Embedded Systems Diploma [ I.T.I ]</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">Data Science Diploma [ Epsilon AI ]</span><br>
+              </div>
+              <div class="qualtitle">Technical Skills :</div>
+              <div class="qualbody">
+                <i class="fas fa-circle"></i><span class="qualdesc">Python [ IBM Coursera ]</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">C# [ Self-Study ]</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">C [ IMT-School ]</span><br>
+              </div> -->
+              <!-- <div class="qualtitle"><h2 class="title">Input your Data</h2></div> -->
+              <h2 class="title">Input your Data</h2>
+              <div class="qualbody" style="justify-content: center;display: flex;text-align: center;">
+                <div class="contforinfo"style="justify-content: center;display: inline-block;text-align: left;padding :40px;">
+                <i class="fas fa-circle"></i><span class="qualdesc">Country</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">Main Branch</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">Employment Type</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">Developer Type</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">Organization Size</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">Gender</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">Ethnicity</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">Education Level</span><br>
+                <i class="fas fa-circle"></i><span class="qualdesc">Career Level</span><br>
+            </div>
+            <div class="contforinfo2" style ="padding:40px;">
+                <form action="{{ url_for('predict')}}"method="POST">
+
+                <input type="text" id="country" name="country", required><br>
+                <!-- <input type="text" id="mainbranch" name="mainbranch"><br> -->
+                <select id="mainbranch" name="mainbranch", required>
+                    <option value="developer">Developer</option>
+                    <option value="notprofessionaldeveloper">Not Professional Developer</option>
+                </select><br>
+                <!-- <input type="text" id="employmenttype" name="employmenttype"><br> -->
+                <select id="employmenttype" name="employmenttype", required>
+                    <option value="fulltime">Full Time</option>
+                    <option value="parttime">Part Time</option>
+                    <option value="freelance">Free Lance</option>
+                </select><br>
+                <!-- <input type="text" id="developertype" name="developertype"><br> -->
+                <select id="developertype" name="developertype", required>
+                    <option value="fullstack">Fullstack Developer</option>
+                    <option value="frontend">Front-end Developer</option>
+                    <option value="desktop">Desktop Application Developer</option>
+                    <option value="mobile">Mobile Developer</option>
+                    <option value="backend">Back-end Developer</option>
+                    <option value="scientist">Scientist</option>
+                    <option value="dataengineer">Data Engineer</option>
+                    <option value="embedded">Embedded Systems Developer</option>
+                    <option value="game">Game Developer</option>
+                    <option value="analyst">Data Analyst</option>
+                    <option value="devops">DevOps Engineer</option>
+                    <option value="engmanager">Engineering Manager</option>
+                    <option value="sysadmn">System Administrator</option>
+                    <option value="site">Site Reliability Engineer</option>
+                    <option value="qa">QA Engineer</option>
+                    <option value="academic">Academic Researcher</option>
+                    <option value="senexec">Senior Executive</option>
+                    <option value="educator">Educator</option>
+                    <option value="designer">Designer</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="dbadmn">Database Administrator</option>
+                </select><br>
+                <!-- <input type="text" id="orgsize" name="orgsize"><br> -->
+                <select id="orgsize" name="orgsize", required>
+                    <option value="1">1</option>
+                    <option value="9">9</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="100">100</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                    <option value="5000">5000</option>
+                    <option value="10000">10000</option>
+                </select><br>
+                <!-- <input type="text" id="gender" name="gender"><br> -->
+                <select id="gender" name="gender", required>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select><br>
+                <!-- <input type="text" id="ethnicity" name="ethnicity"><br> -->
+                <select id="ethnicity" name="ethnicity", required>
+                    <option value="White">White</option>
+                    <option value="South Asian">South Asian</option>
+                    <option value="Hispanic">Hispanic</option>
+                    <option value="Middle Eastern">Middle Eastern</option>
+                    <option value="Southeast Asian">Southeast Asian</option>
+                    <option value="Black">Black</option>
+                    <option value="East Asian">East Asian</option>
+                    <option value="Multiracial">Multiracial</option>
+                    <option value="Biracial">Biracial</option>
+                    <option value="Indigenous">Indigenous</option>
+                </select><br>
+                <!-- <input type="text" id="edlevel" name="edlevel"><br> -->
+                <select id="edlevel" name="edlevel", required>
+                    <option value="Bachelors">Bachelors</option>
+                    <option value="Masters">Masters</option>
+                    <option value="Institute">Institute</option>
+                    <option value="High School">High School</option>
+                    <option value="Associate">Associate</option>
+                    <option value="PHD">PHD</option>
+                    <option value="JD">JD</option>
+                    <option value="Other">Other</option>
+                    <option value="Elementary">Elementary</option>
+                </select><br>
+                <select id="clevel" name="clevel" , required>
+                    <option value="Junior">Junior</option>
+                    <option value="Senior">Senior</option>
+                    <option value="Chief Architect">Chief Architect</option>
+                    <option value="Mid">Mid</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Senior Staff">Senior Staff</option>
+                </select><br>
+                
+            </div>
+        </div>
+        <button type="submit" name="submit" class="main-btn" style ="padding:30px">Submit for Prediction</button>
+                <!-- <a href="" class="main-btn" style ="padding:30px">View Answer</a><br> -->
+
+            </form>
+            <!-- <span class="qualdesc"> Based on these customer attributes, our model predicts a purchase probability of {{ prediction_text }}  </span> -->
+                <!-- <input type="text" id="predres" name="predres"><br> -->
+              
+
+          
+
+        </div>
+
+    </p>
+    
+</section>
+
+<section class="cards" id="services">
+
+    <h2 class="title">Services</h2>
+    <div class="content">
+
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-laptop-code"></i> 
+            </div>
+  <div class="info">
+            <h3>Computer Vision</h3>
+            <p>I provide access to advanced algorithms that process images and return information.</p>
+        </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-file-word"></i>
+            </div>
+            <div class="info">
+                <h3>Text Analysis</h3>
+                <p>I analyse unstructured and semi-structured data for valuable insights, trends & patterns.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-laptop-medical"></i>
+            </div>
+            <div class="info">
+                <h3>Consultation</h3>
+                <p>I provide technical consultation based on data-driven decision making algorithms.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="info">
+                <h3>Time Series Analysis</h3>
+                <p>I analyze time series data in order to extract meaningful statistics and other characteristics of the data</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <h2 class="title">Projects</h2>
+    <div class="content">
+        <div class="project-card">
+            <div class="project-image">
+                
+                <img src="/static/ThanosProject.jpg"/>
+        </div>
+        
+        
+        <div class="project-info">
+            <p class="project-category">Python Development</p>
+            <strong class="project-title">
+                <span>Thanos Project</span>
+                <a href="#" class="more-details">More Details</a>
+            </strong>
+
+        </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="/static/ThanosProject.jpg"/>
+        </div>
+        
+        
+        <div class="project-info">
+            <p class="project-category">Python Development</p>
+            <strong class="project-title">
+                <span>Bank System</span>
+                <a href="#" class="more-details">More Details</a>
+            </strong>
+
+        </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="/static/ThanosProject.jpg"/>
+        </div>
+        
+        
+        <div class="project-info">
+            <p class="project-category">Python Development</p>
+            <strong class="project-title">
+                <span>Web-Scraping</span>
+                <a href="#" class="more-details">More Details</a>
+            </strong>
+
+        </div>
+        </div>
+    </div>
+</section>
+<section class="cards contact" id="contact">
+    <h2 class="title">My Contact Info</h2>
+    <div class="content">
+
+        <div class="card">
+            <div class="icon">
+                <i class="fab fa-whatsapp-square"></i>
+            </div>
+         
+        <div class="info">
+            <h3>WhatsApp</h3>
+            <p>+20 0120 890 4160</p>
+        </div>
+        </div>
+        <div class="card">
+            <div class="iconenv">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info">
+                <h3>E-mail</h3>
+                <p>elgizawy.ahmed.21@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <script></script>
+</section>
+<footer class="footer">
+    <p class="footer-title">Copyrights @<span class="footersign">Ahmed Alaa Ahmed</span></p>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/ahmedaelgizawy"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/AhmedElgizawy95"><i class="fab fa-github-square"></i></a>
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-instagram-square"></i></a>
+    </div>
+
+</footer>
+</body>
+</html>
