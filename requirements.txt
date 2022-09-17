@@ -1,0 +1,7 @@
+Flask
+gensim
+joblib
+numpy
+pandas
+plotly
+scipy
