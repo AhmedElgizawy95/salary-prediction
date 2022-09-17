@@ -1,0 +1,10 @@
+Flask
+gensim
+joblib
+numpy
+pandas
+plotly
+scipy
+sklearn
+csv
+seaborn
