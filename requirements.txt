@@ -1,0 +1,11 @@
+Flask
+gensim
+joblib
+numpy
+pandas
+plotly
+scipy
+sklearn
+pycaret
+csv
+seaborn
